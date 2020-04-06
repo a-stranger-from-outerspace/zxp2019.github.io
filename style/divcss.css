@@ -4,12 +4,13 @@
 {
 	padding-bottom:1em;
 	padding-top:1em;
-	/*Special Version for 2020Qingming*/
-	/*background-image:url('../img/background1.png');*/
+	/*#:Special Version for 2020Qingming*/
+	/*#:background-image:url('../img/background1.png');*/
 	background-image:url('../img/!header-bird.png');
 	background-repeat:no-repeat;
 	text-align:center;
-	color:white;
+	color:blue;
+	/*#:color:white*/
 }
 /*logo*/
 .logo
