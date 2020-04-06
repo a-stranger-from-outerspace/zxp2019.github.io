@@ -4,9 +4,9 @@
 {
 	padding-bottom:1em;
 	padding-top:1em;
-	/*Special Version for Qingming*/
-	background-image:url('../img/background1.png');
-	/*background-image:url('../img/!header-bird.png');*/
+	/*Special Version for 2020Qingming*/
+	/*background-image:url('../img/background1.png');*/
+	background-image:url('../img/!header-bird.png');
 	background-repeat:no-repeat;
 	text-align:center;
 	color:white;
@@ -47,9 +47,9 @@
 	position: sticky;
 	top: 0;
 	padding:8px;
-	/*Special Version for Qingming*/
-	background-color:#000000;
-	/*background-color:#006633;*/
+	/*Special Version for 2020Qingming*/
+	/*background-color:#000000;*/
+	background-color:#006633;
 	font-size:20px;
 }
 /*首页图集*/
