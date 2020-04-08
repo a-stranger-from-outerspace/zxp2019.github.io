@@ -4,13 +4,10 @@
 {
 	padding-bottom:1em;
 	padding-top:1em;
-	/*#:Special Version for 2020Qingming*/
-	/*#:background-image:url('../img/background1.png');*/
 	background-image:url('../img/!header-bird.png');
 	background-repeat:no-repeat;
 	text-align:center;
 	color:blue;
-	/*#:color:white*/
 }
 /*logo*/
 .logo
@@ -48,8 +45,6 @@
 	position: sticky;
 	top: 0;
 	padding:8px;
-	/*Special Version for 2020Qingming*/
-	/*background-color:#000000;*/
 	background-color:#006633;
 	font-size:20px;
 }
@@ -116,4 +111,14 @@
 	width:25%;
 	border:3px solid #006633;
 	text-align:center;
+}
+/*没有radius的blog*/
+#blogWithNoRadius
+{
+	padding:10px;background-color:white;margin:10px;
+}
+/*OInews中的picture*/
+.oiNewsPic
+{
+	width:100%;
 }
