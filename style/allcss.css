@@ -70,3 +70,13 @@ h2,h3
 {
 	 color:#006633;
 }
+code
+{
+	font-family:Consolas,Courier;
+}
+pre
+{
+	background-color:#000000;
+	font-family:Consolas,Courier;
+	color:#FFFFFF;
+}
