@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			「题解」洛谷 P3440 木材加工 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！
+		</title>
+		<link rel="stylesheet" type="text/css" href="../../../style/allcss.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/divcss.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/decocss.css">
+		<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+	</head>
+	<body>
+		<div id="container" style="font-family:微软雅黑">
+	<div id="menu">
+	<div class="line">
+	<div class="logo"><a href="../index.html"><strong style="color:white;font-size:27px;">OIstream 的博客</strong></a></div>
+	<div>
+	&nbsp;&nbsp;&nbsp;
+	<strong><a href=""  target="_blank" style="color:white;font-size:17px;">关于我</a></strong>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong><a href="../index.html"  target="_blank" class="lis" style="color:white;">主页</a></strong>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong><a href="../blog/index.html"  target="_blank" class="lis" style="color:white;">博客</a></strong>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong><a href="../class/index.html"  target="_blank" class="lis" style="color:white;">课堂</a></strong>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong><a href="../live/index.html"  target="_blank" class="lis" style="color:white;">动态</a></strong>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong><a href="../more/index.html"  target="_blank" class="lis" style="color:white;">瞎搞</a></strong>
+	</div>
+	</div>
+	</div>
+	<div id="header">
+	<div class="logo"><strong style="font-size:40px;">「题解」洛谷 P3440 木材加工</strong></div>
+	<br/>
+	<script src="../../../script/showHeader.js"></script>
+	</div>
+	<div class="line">
+			<div id="side">
+				<div id="divlist">
+					<a href="#solution">
+					<div class="item">
+						分析
+					</div>
+					</a>
+					<a href="#code">
+					<div class="item">
+						代码
+					</div>
+					</a>
+				</div>
+			</div>
+		
+			<div id="main">
+				<div id="blog">
+					<a name="solution"><h2 class="center">分析</h2></a>
+					    <div class="S">
+							题目背景什么鬼
+						</div>
+						
+						<p>一道二分的题目。</p>
+
+						<p>木材长度 \leq 10^8，所以可以二分（log 10^8\lt40）小段的长度。</p>
+
+						<p><code>check()</code> 函数用于检验是否可以分成长度为 <code>length</code> 的 <code>partSum</code> 个小段，直接 O(n) 暴力枚举。</p>
+
+						<p>二分查找时由于 r - l = 1 时会产生死循环（？），所以只好加了个特判。</p>
+
+						<p>另一个特判是 <strong>输出0的情况。</strong> 我的方法是调用 <code>check(1)</code>。
+
+					<a name="code"><h2 class="center">代码</h2></a>
+						<pre>#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+ const int MAXN=100005;
+ const int ERROR=2147483647;
+ int n,k;
+ int a[MAXN];
+ 
+bool check(int length,int partSum,int allSum)
+{
+	int cnt=0;
+	for(int i=1;i&lt;=allSum;i++)
+	{
+		cnt+=a[i]/length;
+	}
+	return cnt&gt;=partSum;
+}
+int findLength(int l,int r,int k,int n,int depth)
+{
+//	cout&lt;&lt;l&lt;&lt;" "&lt;&lt;r&lt;&lt;endl;
+//	if(depth==10)
+//	{
+//		return ERROR;
+//	}
+	if(r-l==1)
+	{
+		if(check(l,k,n))
+		{
+			return l;
+		}
+		return r;
+	}
+	if(l&gt;=r)
+	{
+		return l;
+	}
+	int m=(l+r)/2;
+	if(check(m,k,n))
+	{
+		findLength(m,r,k,n,depth+1);
+	}
+	else
+	{
+		findLength(l,m-1,k,n,depth+1);
+	}
+ } 
+ 
+int main()
+{
+	scanf("%d%d",&n,&k);
+	int maxLength=0;
+	for(int i=1;i&lt;=n;i++)
+	{
+		scanf("%d",&a[i]);
+		maxLength=max(maxLength,a[i]);
+	}
+	if(!check(1,k,n))
+	{
+		printf("0\n");
+		return 0;
+	}
+//	cout&lt;&lt;check(114,k,n)&lt;&lt;endl;
+	printf("%d\n",findLength(1,maxLength,k,n,1));
+	return 0;
+}</pre>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<br/>
+			<script src="../../../script/showFooter.js"></script>
+		</div>
+	</div>
+	</body>
+</html>
