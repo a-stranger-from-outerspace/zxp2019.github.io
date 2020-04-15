@@ -6,6 +6,7 @@
 	padding-top:1em;
 	background-image:url('../img/!header-bird.png');
 	background-repeat:no-repeat;
+	background-size:cover;
 	text-align:center;
 	color:blue;
 }
