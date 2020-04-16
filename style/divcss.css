@@ -10,10 +10,6 @@
 	text-align:center;
 	color:blue;
 }
-header img
-{
-	width:100px;
-}
 /*logo*/
 .logo
 {
@@ -49,9 +45,11 @@ header img
 {
 	position: sticky;
 	top: 0;
-	padding:8px;
+	padding-top:8px;
+	padding-bottom:40px;
 	background-color:#006633;
 	font-size:20px;
+	height:100%;
 }
 /*首页图集*/
 #picnews
@@ -126,4 +124,12 @@ header img
 .oiNewsPic
 {
 	width:100%;
+}
+.floatLeft
+{
+	float:left;
+}
+.floatRight
+{
+	float:right;
 }
