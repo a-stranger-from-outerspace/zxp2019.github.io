@@ -4,11 +4,13 @@
 {
 	padding-bottom:1em;
 	padding-top:1em;
-	background-image:url('../img/!header-bird.png');
+	/*background-image:url('../img/!header-bird.png');*/
+        background-image:url('../img/!earth.jpeg');
 	background-repeat:no-repeat;
 	background-size:cover;
 	text-align:center;
-	color:blue;
+	/*color:blue;*/
+        color:white;
 }
 /*logo*/
 .logo
