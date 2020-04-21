@@ -51,6 +51,10 @@
 	padding-bottom:40px;
 	background-color:#006633;
 	font-size:20px;
+	/****3.1.11 2020-04-21更新*/
+	padding-left:15px;
+	padding-right:15px;
+	/****结束*/
 }
 /*首页图集*/
 #picnews
