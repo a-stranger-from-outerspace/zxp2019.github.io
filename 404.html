@@ -3,10 +3,6 @@
 <head>
 	<title>出错了... - OIstream 的博客 | 每一行代码都是改变世界的一份能量！</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="./style/allcss.css">
-	<link rel="stylesheet" type="text/css" href="./style/divcss.css">
-	<link rel="stylesheet" type="text/css" href="./style/decocss.css">
-	<link rel="icon" type="image/ico" href="./img/!icon-bird.ico"/>
 	<script>
 	function showDetail()
 	{
@@ -18,48 +14,16 @@
 	{
 		document.getElementById("s1").innerHTML = "请检查您输入的 URL 是否正确。"
 		document.getElementById("s2").innerHTML = "不正确的 URL 会导致访问不存在的文件，从而产生错误。请尤其检查是否缺少 http:// 前缀或'.'和'/'，以及拼写是否正确。"
+		document.getElementById("s3").innerHTML = "如果您是通过点击超链接的方式到达的这个网页..."
+		document.getElementById("s4").innerHTML = "如果超链接是本网站或本网站管理员提供的，请邮箱联系本网站管理员：zxp1863@163.com，以告知问题，我们会尽快修复 bug。"
+		document.getElementById("s5").innerHTML = "如果超链接并非来自本网站，请设法联系超链接的发布者告知这个问题。"
 	}
 	</script>
 </head>
 <body>
 	<div id="container" style="font-family:微软雅黑">
-	<div id="menu">
-	<div class="line">
-	<div class="logo"><a href=""><strong style="color:white;font-size:27px;">OIstream 的博客</strong></a></div>
-	<div>
-	&nbsp;&nbsp;&nbsp;
-	<strong><a href="./blog/aboutme.html"  target="_blank" style="color:white;font-size:17px;">关于我</a></strong>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong><a href=""  target="_blank" class="lis" style="color:white;">主页</a></strong>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong><a href="./blog/index.html"  target="_blank" class="lis" style="color:white;">博客</a></strong>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong><a href="./class/index.html"  target="_blank" class="lis" style="color:white;">课堂</a></strong>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong><a href="./live/index.html"  target="_blank" class="lis" style="color:white;">动态</a></strong>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong><a href="./more/index.html"  target="_blank" class="lis" style="color:white;">瞎搞</a></strong>
-	</div>
-	</div>
-	</div>
-	<div id="header">
-	<div class="logo"><strong style="font-size:40px;">OIstream 的博客</strong></div>
-	<br/>
-	<script src="./script/showHeader.js"></script>
-	</div>
-	<!--
-	<div id="picnews">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href=""><img src="./img/XpOJ-main-03041.jpg" width="600" height="325" class="hpnews"/></a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"><img src="./img/XpOJ-main-03042.png" width="550" height="325" class="hpnews"/></a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</div>
-	-->
+	<h2 style="text-align:center;">OIstream 的博客</h1>
+	<hr/>
 	<div id="blog" style="text-align:center;">
 		<h1>我谔谔，但是这里似乎出现了一点问题...</h1>
 		<br/>
@@ -73,7 +37,7 @@
 		<br/>
 		<br/>
 		<div style="font-size:16px;" id="detail">
-			<code style="font-size:微软雅黑;" id="p1"></code><strong style="font-size:25px;" id="p2"></strong>
+			<code style="font-family:微软雅黑;" id="p1"></code><strong style="font-size:25px;" id="p2"></strong>
 			<p id="p3"></p>
 		</div>
 		<br/>
@@ -84,13 +48,13 @@
 			<br/>
 			<p id="s2"></p>
 		</div>
-	</div>
-	
-	
-	<div id="footer">
-	<br/>
-	<script src="./script/showFooter.js"></script>
-	</div>
+		<div style="font-size:16px;" id="solve">
+			<br/>
+			<strong id="s3"></strong>
+			<br/>
+			<p id="s4"></p>
+			<p id="s5"></p>
+		</div>
 	</div>
 </body>
 </html>
