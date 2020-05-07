@@ -2,6 +2,8 @@
 /*头*/
 #header
 {
+	/*4.x 不再需要*/
+	display:none;
 	padding-bottom:1em;
 	padding-top:1em;
 	background-image:url('../img/!header-bird.png');
@@ -15,7 +17,7 @@
 /*logo*/
 .logo
 {
-	font-family:Consolas,"Courier New",Courier;
+	font-family:"Microsoft Yahei";
 }
 /*并排*/
 .line
@@ -51,7 +53,7 @@
 	padding-bottom:40px;
 	/****4.0.0 2020-05-06更新*/
 	background-color:#FFFFFF;
-	box-shadow: 1px 1px 10px rgba(136,136,136,.70);
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 	/****结束*/
 	font-size:20px;
 	/****3.1.11 2020-04-21更新*/
@@ -64,7 +66,7 @@
 /*导航栏字体*/
 #menu a
 {
-	color:rgba(0,0,0,.70);
+	color:rgba(0,0,0,.80);
 }
 /*首页图集*/
 #picnews
@@ -86,17 +88,22 @@
 /*OI 周报*/
 #OInews
 {
-	text-align:center;padding:10px;background-color:white;margin:10px;border-radius:1%;
+	text-align:center;padding:10px;background-color:rgba(0,0,0,.85);margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
 /*主页侧边栏*/
 .rightdiv
 {
-	text-align:center;background-color:white;margin:10px;padding:10px;border-radius:1%;
+	background-color:rgba(0,0,0,.85);
+	text-align:center;margin:10px;padding:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
 /*最新博文 & 最新动态 & 博文*/
 #blog
 {
-	padding:10px;background-color:white;margin:10px;border-radius:1%;
+	background-color:rgba(0,0,0,.85);
+	padding:10px;margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
 /*脚部*/
 #footer
@@ -133,7 +140,9 @@
 /*没有radius的blog*/
 #blogWithNoRadius
 {
-	padding:10px;background-color:white;margin:10px;
+	background-color:rgba(0,0,0,.85);
+	padding:10px;margin:10px;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
 /*OInews中的picture*/
 .oiNewsPic
@@ -153,9 +162,42 @@
 /*主页通知栏*/
 #notice
 {
-	background-color:rgba(0,0,0,.70);
+	background-color:rgba(33,133,208,.85);
 	color:white;
 	border-radius:.5rem;
 	text-align:center;
 	padding:10px;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	margin:10px;
+}
+.blogItem
+{
+	margin:10px;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:30px;
+	padding-right:30px;
+	background-color:white;
+	color:rgba(0,0,0,.70);
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+.blogItem .h
+{
+	font-family:'Microsoft Yahei';
+	color:rgba(0,0,0,.70);
+	font-size:30px;
+}
+.blogItem .bigSmall
+{
+	font-size:17px;
+}
+.OInewsPicNew
+{
+	margin:10px;
+}
+.OInewsPicNew img
+{
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
