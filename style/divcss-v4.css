@@ -84,6 +84,7 @@
 #side
 {
 	width:25%;
+	margin:10px;
 }
 /*OI 周报*/
 #OInews
@@ -113,19 +114,24 @@
 /*左侧边栏列表*/
 #divlist
 {
-	margin:10px;
-	border-radius:0.5%;
-	border:4px solid #006633;
+	border-radius:.5rem;
+	background-color:rgba(0,0,0,.85);
+	color:white;
+	box-shadow:1px 1px 5px rgba(136,136,136,.70);
 }
 /*列表中的每一项*/
 .item
 {
-	background-color:#F0FFF0;
-	border-bottom:1px solid black;
+	border-bottom:1px solid rgb(136,136,136);
 	text-align:center;
 	padding-top:3px;
 	padding-bottom:3px;
-	color:black;
+	color:white;
+	font-size:18px;
+}
+.item a
+{
+	color:white;
 }
 /*中间的每一项*/
 .mainitem
