@@ -173,10 +173,10 @@
 .blogItem
 {
 	margin:10px;
-	padding-top:15px;
-	padding-bottom:15px;
-	padding-left:30px;
-	padding-right:30px;
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:15px;
+	padding-right:15px;
 	background-color:white;
 	color:rgba(0,0,0,.70);
 	border-radius:.5rem;
@@ -187,6 +187,10 @@
 	font-family:'Microsoft Yahei';
 	color:rgba(0,0,0,.70);
 	font-size:30px;
+}
+.blogItem span
+{
+	color:rgba(0,0,0,.70);
 }
 .blogItem .bigSmall
 {
