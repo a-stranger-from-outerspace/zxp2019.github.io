@@ -1,59 +1,31 @@
-<!doctype html>
 <html>
 <head>
-	<title>出错了... - OIstream 的博客 | 每一行代码都是改变世界的一份能量！</title>
 	<meta charset="utf-8">
-	<script>
-	function showDetail()
-	{
-		document.getElementById("p1").innerHTML = "错误代码："
-		document.getElementById("p2").innerHTML = "404"
-		document.getElementById("p3").innerHTML = "这个错误是由于您试图加载或访问了不存在的文件导致的。"
-	}
-	function howToSolveIt()
-	{
-		document.getElementById("s1").innerHTML = "请检查您输入的 URL 是否正确。"
-		document.getElementById("s2").innerHTML = "不正确的 URL 会导致访问不存在的文件，从而产生错误。请尤其检查是否缺少 http:// 前缀或'.'和'/'，以及拼写是否正确。"
-		document.getElementById("s3").innerHTML = "如果您是通过点击超链接的方式到达的这个网页..."
-		document.getElementById("s4").innerHTML = "如果超链接是本网站或本网站管理员提供的，请邮箱联系本网站管理员：zxp1863@163.com，以告知问题，我们会尽快修复 bug。"
-		document.getElementById("s5").innerHTML = "如果超链接并非来自本网站，请设法联系超链接的发布者告知这个问题。"
-	}
-	</script>
+	<title>出错了 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！</title>
+	<!-- font-awesome 图标库-->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- -->
 </head>
-<body>
-	<div id="container" style="font-family:微软雅黑">
-	<h2 style="text-align:center;">OIstream 的博客</h1>
-	<hr/>
-	<div id="blog" style="text-align:center;">
-		<h1>我谔谔，但是这里似乎出现了一点问题...</h1>
-		<br/>
-		<p>这个网页在加载时出错了...</p>
-		<br/>
-		<button class="button" type="button" onclick="javascript:history.back(-1);" style="width:120px;height:45px;background-color:#FF9933;border:1px solid #FF9933;">返回上一页</button>
-		&nbsp;&nbsp;&nbsp;
-		<button class="button" type="button" onclick="showDetail()" style="width:120px;height:45px;background-color:#FF9933;border:1px solid #FF9933;">详细信息</button>
-		&nbsp;&nbsp;&nbsp;
-		<button class="button" type="button" onclick="howToSolveIt()" style="width:120px;height:45px;background-color:#FF9933;border:1px solid #FF9933;">我该如何解决？</button>
-		<br/>
-		<br/>
-		<div style="font-size:16px;" id="detail">
-			<code style="font-family:微软雅黑;" id="p1"></code><strong style="font-size:25px;" id="p2"></strong>
-			<p id="p3"></p>
-		</div>
-		<br/>
-		<br/>
-		<div style="font-size:16px;" id="solve">
-			<br/>
-			<strong id="s1"></strong>
-			<br/>
-			<p id="s2"></p>
-		</div>
-		<div style="font-size:16px;" id="solve">
-			<br/>
-			<strong id="s3"></strong>
-			<br/>
-			<p id="s4"></p>
-			<p id="s5"></p>
+<body style="background-color:rgba(0,0,0,.85);color:white;">
+	<div style="margin-left:29%;margin-right:29%;margin-top:17.5%;margin-bottom:17.5%;">
+		<div style="display:flex;justify-content:center;">
+			<div style="width:40%;text-align:center;">
+				<span style="font-size:200px;"><i class="fa fa-exclamation-circle"></i></span>
+				<strong style="font-size:75px;">404!</strong>
+			</div>
+			<div style="width:60%;">
+				<span style="font-size:50px;">谔谔，这个页面找不到了...</span>
+				<br/>
+				<br/>
+				<strong>如果你是自己来到这的...</strong>
+				<br/>
+				<span>请检查网址拼写是否正确。</span>
+				<br/>
+				<br/>
+				<strong>如果你是点击超链接来到这的...</strong>
+				<br/>
+				<span>此超链接存在问题。请设法告知链接提供者这个问题。</span>
+			</div>
 		</div>
 	</div>
 </body>
