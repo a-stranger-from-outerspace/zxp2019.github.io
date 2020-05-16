@@ -106,6 +106,18 @@
 	padding:10px;margin:10px;border-radius:.5rem;
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
+#blog h2
+{
+	text-align:center;
+}
+#blog h1
+{
+	text-align:center;
+}
+#blog h3
+{
+	text-align:center;
+}
 /*脚部*/
 #footer
 {
