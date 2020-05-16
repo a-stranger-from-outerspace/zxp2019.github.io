@@ -6,7 +6,7 @@ OIstreamblog 更新记录(# 为公开版本)
 * 
 
 =======================================
-#Version 4.4.0 [4 Beta]（May 13th，2020）
+#Version 4.4.0 [4 Beta]（May 16th，2020）
 1. 增加 博客文章 页面。
 2. 优化了部分显示（code 元素背景颜色，blog 类中的标题居中）。
 3. 引入 MathJax 渲染的 LaTeX。
