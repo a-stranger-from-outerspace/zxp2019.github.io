@@ -79,7 +79,7 @@ code
 }
 pre
 {
-	background-color:#000000;
+	background-color:rgba(0,0,0,.70);
 	font-family:Consolas,Courier;
-	color:rgba(0,0,0,.70);
+	color:white;
 }
