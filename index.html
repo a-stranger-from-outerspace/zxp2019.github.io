@@ -180,7 +180,7 @@
 				day[4] = "四"
 				day[5] = "五"
 				day[6] = "六"
-				day[7] = "日"
+				day[0] = "日"/*5.18 v4.4.1 Fix bug*/
 				s = s + nowDate.getFullYear().toString() + "年" + (nowDate.getMonth()+1).toString() + "月" + nowDate.getDate().toString() + "日 "
 				s = s + addPrefixZero(nowDate.getHours(), 2).toString() + ":" + addPrefixZero(nowDate.getMinutes(), 2).toString() + ":" + addPrefixZero(nowDate.getSeconds(), 2).toString()
 				s = s + "，星期" + day[nowDate.getDay()]
