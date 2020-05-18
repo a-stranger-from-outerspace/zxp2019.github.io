@@ -15,7 +15,7 @@
 		function showSentence ()
 		{
 			var sent = new Array()
-			sent[0] = "千夫之诺诺，不如一士之谔谔。——《晋书》"
+			sent[0] = "千夫之诺诺，不如一士之谔谔。——《史记·商君列传第八》"
 			sent[1] = "但你出言不逊是！——@语文王子"
 			sent[2] = "stO frost_walker"
 			sent[3] = "stO 屏幕前的大巨佬"
@@ -23,10 +23,15 @@
 			sent[6] = "如果你封了我，会让全天下的oiers知道，洛谷管理员的腐朽！！！洛谷将会臭名昭著！——@Unknown_Error"
 			sent[7] = "不出 10 分钟必能 AC"
 			sent[8] = "今天的 AKer 必然是你"
+			sent[9] = "出现 2147483648"
+			sent[10] = "虐全场"
 			//sent[4] = "gmq"
 			//sent[5] = "观猴"
 			//sent[6] = "考古"
+			sent[11] = "5k 代码毫无 bug"
 			sent[4] = "我是蒟蒻！"
+			sent[12] = "被无数人 star"
+			sent[13] = "被人追着 %"
 			//sent[8] = "我太弱了"
 			//sent[9] = "你 AK 了 CSP"
 			var good = new Array()
@@ -39,7 +44,12 @@
 			good[6] = "考古"
 			good[7] = "调试"
 			good[8] = "打比赛"
-			var num = Math.floor( Math.random() * 9)
+			good[9] = "玩2048"
+			good[10] = "玩 diep.io"
+			good[11] = "开发"
+			good[12] = "上 Github"
+			good[13] = "水犇犇"
+			var num = Math.floor( Math.random() * 14)
 			var rp = Math.floor( Math.random() * 101)
 			document.getElementById("sentence").innerHTML = sent[num]
 			document.getElementById("good").innerHTML = good[num]
