@@ -18,7 +18,7 @@
 }
 /*按钮*/
 .button
-{border-radius:5%;}
+{border-radius:.25rem;}
 /*缩小字体*/
 .small
 {font-size:10px;color:#A0A0A0;}
