@@ -26,11 +26,6 @@
 	justify-content:center;
 
 }
-/*删除线*/
-.S
-{
-	text-decoration:line-through LightSlateGray;
-}
 /*logo下面的副标题*/
 /*中文*/
 .sentence-chn
@@ -279,4 +274,8 @@
 {
 	text-align:center;
 	text-decoration: underline;
+}
+#longBlog img
+{
+	width:80%;
 }
