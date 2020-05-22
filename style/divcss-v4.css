@@ -145,8 +145,12 @@
 	background-color:rgba(0,0,0,.85);
 	color:white;
 	box-shadow:1px 1px 5px rgba(136,136,136,.70);
-	position:sticky;
-	top:58;
+}
+/*左侧边栏需要 fixed 的部分*/
+#sideall
+{
+    position:sticky;
+	top:58px;
 	width:100%;
 }
 /*列表中的每一项*/
@@ -240,4 +244,39 @@
 {
 	border-radius:.5rem;
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+#longBlog
+{
+	background-color:rgba(255,255,255,.85);
+	padding:10px;margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+}
+#longBlog p,#longBlog h1,#longBlog h2,#longBlog h3,#longBlog h4,#longBlog h5,#longBlog h6,#longBlog span
+{
+	color:black;
+}
+#longBlog pre
+{
+	background-color:black;
+}
+#longBlog h2
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h1
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h3
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h4
+{
+	text-align:center;
+	text-decoration: underline;
 }
