@@ -10,7 +10,7 @@ OIstreamblog 更新记录(# 为公开版本)
 Fix:
 	1. 博客侧边栏显示问题。
 Change:
-	1. 博客文章超链接点击时显示成白色的特性。
+	1. 博客文章超链接点击时显示成白色的特性，现在已经变成深蓝色。
 Maybe need change style: 
 	1. Footer 下面加一个换行（目前处于玄学原因无法实现？）
 Need fix: 
