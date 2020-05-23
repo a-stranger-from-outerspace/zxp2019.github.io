@@ -279,3 +279,19 @@
 {
 	width:80%;
 }
+#longBlog a:link
+{
+	color:#3399FF;
+}
+#longBlog a:visited
+{
+	color:#3399FF;
+}
+#longBlog a:hover
+{
+	color:#1177DD;
+}
+#longBlog a:active
+{
+	color:#1177DD;
+}
