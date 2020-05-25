@@ -6,7 +6,7 @@ OIstreamblog 更新记录(# 为公开版本)
 * 
 
 =======================================
-#Version 4.5.6（May 26th，2020）by oistream
+#Version 4.5.6（May 25th，2020）by oistream
 Change:
 	1. 导航栏变透明。
 	2. Footer 更改。
@@ -17,7 +17,7 @@ Need fix:
 	2. 兼容移动端设备。（需要大改，咕了）
 =======================================
 =======================================
-#Version 4.5.5（May 26th，2020）by ASFOS & oistream
+#Version 4.5.5（May 25th，2020）by ASFOS & oistream
 Change:
 	1. 去掉了导航栏“主页”标签。
 	2. 增大了 404 页面字体。
