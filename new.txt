@@ -10,6 +10,7 @@ OIstreamblog 更新记录(# 为公开版本)
 #Version 4.6.1（May 29th，2020）
 Add:
 	1. 增加了部分渲染，使其更支持自 Typora 转换来的 HTML 文件。
+	2. 加了一篇博文。
 Maybe need change style: 
 	1. Footer 下面加一个换行（目前处于玄学原因无法实现？）
 Need fix: 
