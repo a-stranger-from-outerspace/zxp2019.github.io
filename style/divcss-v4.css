@@ -247,7 +247,7 @@
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 	color:black;
 }
-#longBlog p,#longBlog h1,#longBlog h2,#longBlog h3,#longBlog h4,#longBlog h5,#longBlog h6,#longBlog span
+#longBlog p,#longBlog h1,#longBlog h2,#longBlog h3,#longBlog h4,#longBlog h5,#longBlog h6,#longBlog span,#longBlog b,#longBlog i,#longBlog em,#longBlog strong
 {
 	color:black;
 }
