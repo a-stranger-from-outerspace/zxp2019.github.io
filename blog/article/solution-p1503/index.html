@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<title>题解：洛谷 P1503 鬼子进村 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！</title>
+<link rel="stylesheet" type="text/css" href="../../../style/allcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/divcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/decocss-v4.css">
+		<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+		<!--导入 Font Awesome-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<!---->
+		<!--导入 MathJax 的 LaTeX 渲染-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<!---->
+</head>
+<body>
+	<div id="container" style="font-family:微软雅黑">
+		<div id="menu">
+			<script src="../../../script/showMenu.js"></script>
+		</div>
+		<div class="line">
+				<div id="side">
+				<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+			<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
+			</div>
+			<div id="sideall">
+					<div id="divlist">
+						<div class="item">
+							<a href="#1">
+								<br/>
+								<i class="fa fa-tag"></i> 顶部
+								<br/>
+								<br/>
+							</a>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+				<div id="main">
+					<div class="blogItem" style="text-align:center;">
+						<span class="h">题解：洛谷 P1503 鬼子进村</span><br/><br/>
+						<small><i class="fa fa-tag"></i> 题解&nbsp;&nbsp;<i class="fa fa-book"></i> OI | 数据结构 | 平衡树 | Treap&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-05-29 12:24&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-05-29 12:24&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+					</div>
+					<div id="longBlog">
+						<a name="1"></a>
+<p>数据结构题。</p>
+<p>简略题意：</p>
+<p>给定一个序列和三种操作。</p>
+<ul>
+<li>将该序列在某个结点处切断，则原先该结点位于的区间分成了两个区间。</li>
+<li>将 <strong>当前还未被接上的结点中最后一个被切断的</strong> <em>（注意这个地方原题没有说清楚）</em> 结点接上，则原先该结点左右两侧的区间合成了一个区间。</li>
+<li>查询一个结点所在的区间的长度 <strong>（若该结点处于被切断状态则输出 \(0\)）</strong></li>
+
+</ul>
+<p>这道题有线段树解法和平衡树解法。下面我来说一种平衡树解法。</p>
+<p>首先，用平衡树来维护 <strong>被切断的结点</strong> 的 <strong>编号</strong>，而不是没有被切断的结点。</p>
+<p>那么前两个操作就等同于添加结点和删除结点。</p>
+<p>对于第三个操作，求出 \(x\) 在平衡树里的前驱和后继（就是它所在区间的左右端点）就可以推算出长度了。</p>
+<p>这道题就是这样，但是需要注意细节很多，所幸样例比较靠谱，靠着样例就调试出了很多错误。下面列举几个错误。</p>
+<ul>
+<li>对于第二个操作，需要额外记录一下 <strong>每次被切断的结点的值</strong> 。一开始我理解错题意了，以为只开一个变量记录就行，结果后来发现不行，因为有可能出现连续的 <code>R</code> 操作。所以解决方案是用一个 <strong>后进先出的结构来记录</strong>（用栈就行，当然数组也可以，不过那相当于人工模拟了栈）。每次 <code>R</code> 操作就从栈中 <code>pop</code> 一个出来。</li>
+<li>对于第三个操作，需要注意一下你的求前驱后继函数 <strong>求一个在平衡树中已经存在的数</strong> 时的行为，比如我的函数就会返回在平衡树中比那个数还要小的数，这样一来算出来结果就不是 \(0\) 了，所以我又写了一个 <code>found</code> 函数来判断一个结点是否在平衡树中，代码如下：</li>
+
+</ul>
+<pre><code class='language-cpp' lang='cpp'>bool found(int id,int val)
+{
+	if(!id)
+	{
+		return false;
+	}
+	if(val&lt;tree[id].val)
+	{
+		return found(tree[id].ch[0],val);
+	}
+	else if(val==tree[id].val)
+	{
+		return true;
+	}
+	else
+	{
+		return found(tree[id].ch[1],val);
+	}
+}
+</code></pre>
+<ul>
+<li>样例之所以比较仁慈，是因为它有 <strong>平衡树中只剩一个数</strong> 的情况。这种情况让我们认识到了求前驱（后继）在某些情况下有可能会出现问题。例如我们求一个比平衡树中存在的最小的数还要小的数的前驱。对于这种情况，挨个特判似乎不是特别好的办法。可以用 <strong>哨兵</strong> 的方法，先在平衡树中插入两个结点，值分别为 \(0\) 与 \(n+1\)，有效避免了上述情况。</li>
+
+</ul>
+<p>下面放 AC 代码：</p>
+<pre><code class='language-cpp' lang='cpp'>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+#include &lt;cstdio&gt;
+#include &lt;stack&gt;
+using namespace std;
+const int MAXN=50005;
+struct Node
+{
+	int ch[2];
+	int size,cnt;
+	int rnd,val;
+};
+Node tree[MAXN&lt;&lt;1];
+int n,tot,root;
+int newnode(int val)
+{
+	tot++;
+	tree[tot].val=val;
+	tree[tot].cnt=1;
+	tree[tot].size=1;
+	tree[tot].rnd=rand();
+	tree[tot].ch[0]=0;
+	tree[tot].ch[1]=0;
+	return tot;
+}
+void update(int id)
+{
+	tree[id].size=tree[tree[id].ch[0]].size+tree[tree[id].ch[1]].size+tree[id].cnt;
+}
+void rotate(int &amp;id,int k)
+{
+	int x=tree[id].ch[k];
+	tree[id].ch[k]=tree[x].ch[k^1];
+	tree[x].ch[k^1]=id;
+	update(id);
+	update(x);
+	id=x;
+}
+void insert(int &amp;id,int val)
+{
+	if(!id)
+	{
+		id=newnode(val);
+		return ;
+	}
+	if(tree[id].val==val)
+	{
+		tree[id].cnt++;
+	}
+	else
+	{
+		int k=val&gt;tree[id].val;
+		insert(tree[id].ch[k],val);
+		if(tree[id].rnd&gt;tree[tree[id].ch[k]].rnd)
+		{
+			rotate(id,k);
+		}
+	}
+	update(id);
+}
+void del(int &amp;id,int val)
+{
+	if(!id)
+	{
+		return ;
+	}
+	if(tree[id].val==val)
+	{
+		if(tree[id].cnt&gt;1)
+		{
+			tree[id].cnt--;
+			tree[id].size--;
+		}
+		else
+		{
+			int k=tree[tree[id].ch[1]].rnd&lt;tree[tree[id].ch[0]].rnd;
+			if(!tree[id].ch[0] || !tree[id].ch[1])
+			{
+				id=tree[id].ch[0]+tree[id].ch[1];
+			}
+			else
+			{
+				rotate(id,k);
+				del(id,val);
+			}
+		}
+	}
+	else
+	{
+		tree[id].size--;
+		int k=tree[id].val&lt;val;
+		del(tree[id].ch[k],val);
+	}
+}
+int pre(int id,int val)
+{
+	int k=id;
+	int ans=0;
+	while(k&gt;0)
+	{
+		if(tree[k].val&lt;val)
+		{
+			ans=k;
+			k=tree[k].ch[1];
+		}
+		else
+		{
+			k=tree[k].ch[0];
+		}
+	}
+	return tree[ans].val;
+}
+int nxt(int id,int val)
+{
+	int k=id;
+	int ans=0;
+	while(k&gt;0)
+	{
+		if(tree[k].val&gt;val)
+		{
+			ans=k;
+			k=tree[k].ch[0];
+		}
+		else
+		{
+			k=tree[k].ch[1];
+		}
+	}
+	return tree[ans].val;
+}
+bool found(int id,int val)
+{
+	if(!id)
+	{
+		return false;
+	}
+	if(val&lt;tree[id].val)
+	{
+		return found(tree[id].ch[0],val);
+	}
+	else if(val==tree[id].val)
+	{
+		return true;
+	}
+	else
+	{
+		return found(tree[id].ch[1],val);
+	}
+}
+void output(int n)
+{
+	for(int i=0;i&lt;=tot;i++)
+	{
+		cout&lt;&lt;&quot;node no. &quot;&lt;&lt;i&lt;&lt;&quot;:\t( val:&quot;&lt;&lt;tree[i].val&lt;&lt;&quot; cnt:&quot;&lt;&lt;tree[i].cnt&lt;&lt;&quot; rnd:&quot;&lt;&lt;tree[i].rnd&lt;&lt;&quot; size:&quot;&lt;&lt;tree[i].size&lt;&lt;&quot; lson:&quot;&lt;&lt;tree[i].ch[0]&lt;&lt;&quot; rson:&quot;&lt;&lt;tree[i].ch[1]&lt;&lt;&quot;)&quot;&lt;&lt;endl;
+	}
+	cout&lt;&lt;endl;
+}
+int main()
+{
+    srand(time(0));
+    int m;
+    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    int x;
+    stack&lt;int&gt; last;
+    char opt[15];
+    insert(root,0);
+    insert(root,n+1);
+    for(int i=1;i&lt;=m;i++)
+    {
+        scanf(&quot;%s&quot;,opt);
+        if(opt[0]==&#39;D&#39;)
+        {
+            scanf(&quot;%d&quot;,&amp;x);
+            insert(root,x);
+            last.push(x);
+        }
+        else if(opt[0]==&#39;R&#39;)
+        {
+            del(root,last.top());
+            last.pop();
+        }
+         else if(opt[0]==&#39;Q&#39;)
+        {
+            scanf(&quot;%d&quot;,&amp;x);
+            if(found(root,x))
+            {
+            	printf(&quot;%d\n&quot;,0);
+			}
+			else
+			{
+				printf(&quot;%d\n&quot;,nxt(root,x)-pre(root,x)-1);
+			}
+        }
+//        cout&lt;&lt;last&lt;&lt;endl;
+//        output(n);
+    }
+    return 0;
+}
+</code></pre>
+</div>
+</div>
+</div>
+
+<div id="footer">
+	<br/>
+	<script src="../../../script/showFooter.js"></script>
+</div>
+</div>
+</body>
+</html>
