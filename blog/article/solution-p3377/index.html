@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+	<title>题解：洛谷 P3377 【模板】左偏树（可并堆） - OIstream 的博客 | 每一行代码都是改变世界的一份能量！</title>
+	<link rel="stylesheet" type="text/css" href="../../../style/allcss-v4.css">
+			<link rel="stylesheet" type="text/css" href="../../../style/divcss-v4.css">
+			<link rel="stylesheet" type="text/css" href="../../../style/decocss-v4.css">
+			<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+			<!--导入 Font Awesome-->
+			<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+			<!---->
+			<!--导入 MathJax 的 LaTeX 渲染-->
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async
+					src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+			</script>
+			<!----></head>
+<body>
+	<div id="container" style="font-family:微软雅黑">
+		<div id="menu">
+			<script src="../../../script/showMenu.js"></script>
+		</div>
+		<div class="line">
+				<div id="side">
+				<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+			<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
+			</div>
+			<div id="sideall">
+					<div id="divlist">
+						<div class="item">
+							<a href="#1">
+								<br/>
+								<i class="fa fa-tag"></i> 关于名字
+								<br/>
+								<br/>
+							</a>
+							
+						</div>
+						<div class="item">
+							<a href="#2">
+								<br/>
+								<i class="fa fa-tag"></i> 关于一些小 bug
+								<br/>
+								<br/>
+							</a>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+				<div id="main">
+					<div class="blogItem" style="text-align:center;">
+						<span class="h">题解：洛谷 P3377 【模板】左偏树（可并堆）</span><br/><br/>
+						<small><i class="fa fa-tag"></i> 题解&nbsp;&nbsp;<i class="fa fa-book"></i> OI | 数据结构 | 可并堆 | 左偏树&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-06-13 15:43&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-06-13 15:43&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+					</div>
+					<div id="longBlog">
+	<a name="1"><h2>关于名字</h2></a>
+<p>我其实觉得叫「左偏堆」好一些。</p>
+<a name="2"><h2>关于一些小 bug</h2></a>
+<p>这里列举一些我遇到的小的 bug。</p>
+<h3>1 <code>pop()</code></h3>
+<p>有一句 <code>t[x].fa=merge(t[x].ls,t[x].rs);</code>，我一开始没有理解这句话的意思<del>以为是从老师那里抄错了</del>，结果删掉了这句话。</p>
+<p>但是正如讨论区的 <a href='https://www.luogu.com.cn/user/54544'>LJB00131</a> 神犇所说，这句话的意思是，以后并查集向上依然可能查找到这个结点，而假如这个结点的 <code>fa</code> 被更改，那么久不能再向上查了，“链断了”。</p>
+<h3>2 主函数</h3>
+<p>注意题目输入数据均不保证结点不被删除，所以我们要判断一下：</p>
+<pre><code class='language-cpp' lang='cpp'>if(t[x].val==-1 || t[y].val==-1 || fx==fy)
+			{
+				continue;
+			}
+</code></pre>
+<p>另外，<code>x</code> 和 <code>y</code> 在合并之后都要更改 <code>fa</code>：</p>
+<pre><code class='language-cpp' lang='cpp'>int fz=merge(fx,fy);
+			t[fx].fa=fz;
+			t[fy].fa=fz;
+</code></pre>
+<p>最后，2 操作的判错，千万不要写成 <code>t[fx].val==-1</code>！！</p>
+<pre><code class='language-cpp' lang='cpp'>if(t[x].val==-1)
+			{
+				printf(&quot;-1\n&quot;);
+				continue;
+			}
+</code></pre>
+<h2>具体数据结构的介绍有空再补。</h2>
+</div>
+</div>
+</div>
+
+<div id="footer">
+	<br/>
+	<script src="../../../script/showFooter.js"></script>
+</div>
+</div>
+</body>
+</html>
