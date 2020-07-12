@@ -13,7 +13,6 @@ body
 	padding-bottom:0em;
 	padding-top:0em;
 	background-color:rgb(232,232,232)/*#000000*/;
-	color:white;
 }
 div
 {
@@ -34,7 +33,6 @@ p
 	line-height:120%;
 	text-decoration:none;
 	text-indent:25px;
-	color:white;
 }
 /*粗体*/
 strong
