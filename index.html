@@ -10,6 +10,10 @@
 	<!-- font-awesome 图标库-->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- -->
+	<!-- 导入Gitalk 支持文件-->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	<!---->
 	<link rel="icon" type="image/ico" href="./img/!icon-bird.ico"/>
 	<script>
 		function showSentence ()
@@ -187,6 +191,20 @@
 	<div class="OInewsPicNew">
 		<a href="./blog/oinews/2/index.html"><img width="100%" src="./blog/oinews/2/幻灯片1.jpg"></a>
 	</div>
+		<div id="gitalk-container"></div>     <script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: 2c00a1a3c7fe31cced9d,
+        clientSecret: 41a9cd57f80a33bb41d8a498ddd53e488097b3ab,
+        repo: zxp2019.github.io,
+        owner: zxp2019,
+        admin: [zxp2019],
+        id:window.location.pathname,
+
+    });
+    gitalk.render('gitalk-container');
+</script> 
 	</div>
 	
 	<div id="side">
