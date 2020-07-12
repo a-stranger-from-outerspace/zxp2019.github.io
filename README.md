@@ -3,7 +3,7 @@ My github.io blog.
 
 # Update Log
 
-\[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\] \[Chinese(Markdown File)\]
+\[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
 最新版本：v4.6.3
 
