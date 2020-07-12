@@ -39,7 +39,6 @@ strong
 {
 	line-height:120%;
 	text-indent:25px;
-	color:white;
 }
 /*链接*/
 a
@@ -65,11 +64,6 @@ a:active
 h1
 {
 	text-align:center;
-	color:white;
-}
-h2,h3
-{
-	 color:white;
 }
 code
 {
