@@ -25,15 +25,12 @@
 			sent[8] = "今天的 AKer 必然是你"
 			sent[9] = "出现 2147483648"
 			sent[10] = "虐全场"
-			//sent[4] = "gmq"
-			//sent[5] = "观猴"
-			//sent[6] = "考古"
 			sent[11] = "5k 代码毫无 bug"
 			sent[4] = "我是蒟蒻！"
 			sent[12] = "被无数人 star"
 			sent[13] = "被人追着 %"
-			//sent[8] = "我太弱了"
-			//sent[9] = "你 AK 了 CSP"
+			sent[14] = "轻松飞越珠峰"
+			sent[15] = "误判率几乎为0"
 			var good = new Array()
 			good[0] = "谔谔"
 			good[1] = "出言不逊"
@@ -49,7 +46,9 @@
 			good[11] = "开发"
 			good[12] = "上 Github"
 			good[13] = "水犇犇"
-			var num = Math.floor( Math.random() * 14)
+			good[14] = "GE 模拟飞行"
+			good[15] = "玩 splix.io"
+			var num = Math.floor( Math.random() * 16)
 			var rp = Math.floor( Math.random() * 101)
 			document.getElementById("sentence").innerHTML = sent[num]
 			document.getElementById("good").innerHTML = good[num]
@@ -103,8 +102,8 @@
 	<div class="line" style="padding:5px;">
 	<div id="main">
 	<div id="notice">
-	<i class="fa fa-info"></i> &nbsp; <strong>通知</strong><br/>
-	<p>最近本博客将会进行一次大的更新！届时整个博客都会有巨大的改观！由于更新是不断进行的（快开学了，很可能咕 qaq），因而可能会出现更新了一半的情况，请大家不要见怪。QwQ...</p>
+	<i class="fa fa-info"></i> &nbsp; <strong>动态</strong>&nbsp;&nbsp;<small><i class="fa fa-clock-o"></i>&nbsp;2020-07-12 14:23</small><br/>
+	<p>近期计划：搞好评论系统、代码高亮、在主页做个随机生成对应网址的二维码，如您想让自己的网址出现在生成的二维码中，欢迎联系我（其实就是友链了qaq）</p>
 	</div>
 	<div id="blog">
 		<h2 class="center"><i class="fa fa-calendar-o"></i>&nbsp;最新博文</h2>
