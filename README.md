@@ -19,13 +19,9 @@ Markdown 格式来书写长文本。
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-最新版本：v4.7.0
+最新版本：v4.8.1
 
-1. 优化了长文本段落的显示。
-2. 优化了长文本内嵌图片的显示。
-3. 优化了长文本内嵌引用的显示。
-4. 优化了长文本背景的显示。
-5. 更新了首页打卡区的内容。
+Fix bug。
 
 ## v3
 ### v3.0.1 (2020.3.24)
@@ -326,3 +322,6 @@ Change:
 Add: 
 1. Gitalk 评论模块。
 2. 为适应 Gitalk，调整了部分渲染。
+
+### v4.8.1 (2020.7.12) by oistream
+Fix: Gitalk 头像大小显示问题。
