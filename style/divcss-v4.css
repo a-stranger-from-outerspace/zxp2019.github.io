@@ -108,6 +108,7 @@
 	background-color:rgba(0,0,0,.85);
 	text-align:center;margin:10px;padding:10px;border-radius:.5rem;
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:white;
 }
 /*最新博文 & 最新动态 & 博文*/
 #blog
