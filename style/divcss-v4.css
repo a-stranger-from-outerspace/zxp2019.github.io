@@ -269,6 +269,10 @@
 	line-height:1.75em;
 	letter-spacing:.1em;
 }
+#lbGitalk pre
+{
+	color:black;
+}
 #longBlog
 {
 	background-color:rgba(255,255,255);
