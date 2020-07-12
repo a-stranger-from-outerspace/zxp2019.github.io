@@ -250,6 +250,24 @@
 	border-radius:.5rem;
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
 }
+#lbGitalk
+{
+	background-color:rgba(255,255,255);
+	padding-top:40px;
+	padding-bottom:40px;
+	padding-left:40px;
+	padding-right:40px;
+	margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+}
+#lbGitalk p
+{
+	color:black;
+	text-indent:0em;
+	line-height:1.75em;
+	letter-spacing:.1em;
+}
 #longBlog
 {
 	background-color:rgba(255,255,255);
