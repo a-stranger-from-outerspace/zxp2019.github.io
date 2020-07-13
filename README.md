@@ -15,13 +15,26 @@ Markdown 格式来书写长文本。
 
 [FontAwesome](http://www.fontawesome.com.cn/) 的美观图标。
 
+[Gitalk](https://gitalk.github.io/) 评论插件。
+
 # Update Log
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-最新版本：v4.8.1
+最新版本：v4.9.0
 
-Fix bug。
+Fix: 
+
+1. 旧版页面 Bug。
+2. 修复了主页光荣榜与友链区文字超出边框的 Bug（主要是某人名字太长 Doge）。
+
+Change:
+
+1. 使旧版页面支持新版。
+
+Add:
+
+1. 主页“今天去哪儿”模块。
 
 ## v3
 ### v3.0.1 (2020.3.24)
@@ -325,3 +338,17 @@ Add:
 
 ### v4.8.1 (2020.7.12) by oistream
 Fix: Gitalk 头像大小显示问题。
+
+### v4.9.0 (2020.7.13) by oistream
+Fix: 
+
+1. 旧版页面 Bug。
+2. 修复了主页光荣榜与友链区文字超出边框的 Bug（主要是某人名字太长 Doge）。
+
+Change:
+
+1. 使旧版页面支持新版。
+
+Add:
+
+1. 主页“今天去哪儿”模块。
