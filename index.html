@@ -59,7 +59,18 @@
 		{
              return (Array(n).join(0) + num).slice(-n);
 		}
-
+		function showImg ()
+		{
+			var imgs=new Array()
+			imgs[0]="./x/7foj.png"
+			imgs[1]="./x/diep.png"
+			imgs[2]="./x/oistream.png"
+			imgs[3]="./x/luogu.png"
+			imgs[4]="./x/loj.png"
+			imgs[5]="./x/vijos.png"
+			var num = Math.floor( Math.random() * 6)
+			document.getElementById("imgToShow").src = imgs[num]
+		}
 	</script>
 </head>
 <body>
@@ -224,6 +235,16 @@
 			<br/>
 			<i class="fa fa-github"></i> <a href="https://github.com/zxp2019/">zxp2019</a>
 			</div>
+		</div>
+		<div class="rightdiv">
+			<h2><i class="fa fa-map-signs"></i>&nbsp;今天去哪儿</h2>
+			<br/>
+			<img id="imgToShow" src="./x/default.png"/>
+			<br/>
+			<br/>
+			<button type="button" onclick="showImg()" class="button" style="width:100px;height:33px;background-color:#FF9933;border:1px solid #FF9933;"><i class="fa fa-flash"></i>&nbsp;&nbsp;手气不错</button>
+			<br/>
+			<pre class="small">以上信息仅供娱乐！</pre>
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-calendar-check-o"></i>&nbsp;打卡区</h2>
