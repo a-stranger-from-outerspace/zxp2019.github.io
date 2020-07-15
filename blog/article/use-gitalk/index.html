@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			使用 Gitalk 实现评论功能 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！
+		</title>
+		<link rel="stylesheet" type="text/css" href="../../../style/allcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/divcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/decocss-v4.css">
+		<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+		<!--导入 Font Awesome-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<!---->
+		<!--导入 MathJax 的 LaTeX 渲染-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<!---->
+		<!--导入不蒜子统计器-->
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <!---->
+        <!-- 导入Gitalk 支持文件-->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	<!---->
+	</head>
+	<body>
+		<div id="container" style="font-family:微软雅黑">
+	<div id="menu">
+		<script src="../../../script/showMenu.js"></script>
+	</div>
+	<div class="line">
+			<div id="side">
+			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+		<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
+		</div>
+		<div id="sideall">
+				<div id="divlist">
+					<div class="item">
+						<a href="#1">
+							<br/>
+							<i class="fa fa-tag"></i> 什么是 Gitalk
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#2">
+							<br/>
+							<i class="fa fa-tag"></i> 申请 Github Application
+							<br/>
+							<br/>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#3">
+							<br/>
+							<i class="fa fa-tag"></i> 在博客代码中使用 Gitalk
+							<br/>
+							<br/>
+						</a>
+                    </div>
+                    <div class="item">
+						<a href="#4">
+							<br/>
+							<i class="fa fa-tag"></i> 初始化评论区
+							<br/>
+							<br/>
+						</a>
+                    </div>
+                    <div class="item">
+						<a href="#5">
+							<br/>
+							<i class="fa fa-tag"></i> 完结撒花
+							<br/>
+							<br/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			<div id="main">
+				<div class="blogItem" style="text-align:center;">
+					<span class="h">使用 Gitalk 实现评论功能</span><br/><br/>
+					<small><i class="fa fa-tag"></i> 网页开发&nbsp;&nbsp;<i class="fa fa-book"></i> 其它&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-07-15 14:32&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-07-15 14:32&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+					<span id="busuanzi_container_page_pv" style="font-size:13px;">
+						<i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+</span>
+				</div>
+				<div id="longBlog"><a name="1"><h2>什么是 Gitalk</h2></a>
+<p>Gitalk 是基于 Github Issues 的一款评论插件。被广泛应用于 Github Pages 搭建的博客中。</p>
+<p>Gitalk 支持 Markdown 语法，并且整个 UI 都特别美观。</p>
+<p>Gitalk 不需要留邮箱地址，也不需要注册账号。他是基于 Github 账号的，可以直接通过 Github 账号发东西。</p>
+<p>Gitalk 的本质实际上是 Issue，在一个页面安装 Gitalk 后，会发现博客多出来一个 Issue，而 Gitalk 上显示的评论实际上就是 Issue 中的 comment。所以不难理解为什么可以用 Markdown 了。</p>
+<p>Gitalk 目前在 Github 上开源。Repo 地址：<a href='https://github.com/gitalk/gitalk/' target='_blank' class='url'>https://github.com/gitalk/gitalk/</a></p>
+<a name="2"><h2>申请 Github Application</h2></a>
+<p>使用 Gitalk 需要先申请 Github Application。</p>
+<p>点<a href='https://github.com/settings/applications/new'>这里</a>，会进入申请 Github App 界面。</p>
+<p><img src="https://zxp2019.github.io/img/register-github-application.JPG" referrerpolicy="no-referrer"></p>
+<ul>
+<li>Application Name 那里随便填，比如填  <code>My Blog</code>  就可以。</li>
+
+</ul>
+<ul>
+<li>Homepage URL 那里填你博客主站的地址（比如我就可以填 <code>https://zxp2019.github.io</code> ）</li>
+<li>Application Description 可以不填。</li>
+<li>Authorization Callback URL 也填你博客主站的地址（和 Homepage URL 相同）</li>
+
+</ul>
+<p>然后看见那个 AC 色的按钮了吗？点它！</p>
+<p>之后你进入了一个网页（截的图找不到了 qwq）。里面有两个重要信息：Client ID 和 Client Secret（都是字符串）。这两个信息<strong>一定要保存下</strong>，写这篇文章时我再回去就找不到这两个信息了。</p>
+<p>这样你就申请好 Github Application 了。</p>
+<a name="3"><h2>在博客代码中使用 Gitalk</h2></a>
+<p>将下面的代码复制一下。</p>
+<pre><code class='language-html' lang='html'>&lt;!-- 导入Gitalk 支持文件--&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
+&lt;script src=&quot;https://unpkg.com/gitalk@latest/dist/gitalk.min.js&quot;&gt;&lt;/script&gt; 
+&lt;!----&gt;
+&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;    &lt;script type=&quot;text/javascript&quot;&gt;
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: &#39;你的 Client ID&#39;,
+        clientSecret: &#39;你的 Client Secret&#39;,
+        repo: &#39;你博客的 repo 名&#39;,
+        owner: &#39;你的 Github 用户名&#39;,
+        admin: [&#39;你的 Github 用户名&#39;],
+        id:window.location.pathname,
+
+    });
+    gitalk.render(&#39;gitalk-container&#39;);
+&lt;/script&gt;   
+</code></pre>
+<p>需要注意几点：</p>
+<ul>
+<li>前面的  <code>&lt;link&gt;</code>  和  <code>&lt;script&gt;</code>  可以放在  <code>head</code>  里。</li>
+<li>后面的几项参数一定是包含单引号的，不能去掉。</li>
+<li>那个  <code>&lt;div&gt;</code>  需要放到你要插入评论区的位置。</li>
+
+</ul>
+<a name="4"><h2>初始化评论区</h2></a>
+<p>在评论区设置之初，Gitalk 会自动生成一个 Issue。所以第一次加载会比较慢。</p>
+<p><strong>一定要找个网好的时段！！！</strong></p>
+<p>然后刷新你放置评论区的那个页面，会看到类似下面的状况。</p>
+<p><img src="https://zxp2019.github.io/img/gitalk-1.JPG" referrerpolicy="no-referrer"></p>
+<p>然后发东西就可以了！</p>
+<p>如果遇到 Network Error 或者下面的状况，如果确保自己配置的没问题的话，多刷新几次。如果你的博客绑定了其他域名，可以看看<a href='https://blog.csdn.net/w47_csdn/article/details/88858343'>这篇文章</a>。</p>
+<p>发完第一条评论后去 Issue 区，可以看见新创建了一个 Issue，其名字就是你放评论区那个页面的 title。</p>
+<p><img src="https://zxp2019.github.io/img/gitalk-issue-1.JPG" referrerpolicy="no-referrer"></p>
+<p>而这个 Issue 里的内容其实就是你评论的内容。</p>
+<p>所以当网不好加载不出来 Gitalk 时，不妨直接找到这个 Issue 进行 Comment。</p>
+<a name="5"><h2>完结撒花</h2></a>
+<p>顺便放一张最终效果（感谢 ASFOS 友情出镜）。</p>
+<p><img src="https://zxp2019.github.io/img/gitalk-2.png" referrerpolicy="no-referrer"></p>
+<p><strong>本文由作者原创，转载请注明以下信息：</strong></p>
+<ul>
+<li>作者：oistream</li>
+<li>博客：<a href='https://zxp2019.github.io' target='_blank' class='url'>https://zxp2019.github.io</a></li>
+<li>原文链接。</li>
+
+</ul>
+<p><strong>未经作者书面同意，转载的本文不可设置任何包括打赏在内的盈利性功能。</strong></p>
+</div>
+<div id="lbGitalk">
+    <div id="gitalk-container"></div>    <script type="text/javascript">
+var gitalk = new Gitalk({
+
+// gitalk的主要参数
+    clientID: '2c00a1a3c7fe31cced9d',
+    clientSecret: '41a9cd57f80a33bb41d8a498ddd53e488097b3ab',
+    repo: 'zxp2019.github.io',
+    owner: 'zxp2019',
+    admin: ['zxp2019'],
+    id:window.location.pathname,
+
+});
+gitalk.render('gitalk-container');
+</script>   
+</div>
+</div>
+</div>
+<div id="footer">
+    <br/>
+    <script src="../../../script/showFooter.js"></script>
+</div>
+</div>
+</body>
+</html>
