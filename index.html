@@ -9,8 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="./style/decocss-v4.css">
 	<!-- font-awesome 图标库-->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-	<!-- -->
-	
+	<!-- 导入不蒜子计数器-->
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	<link rel="icon" type="image/ico" href="./img/!icon-bird.ico"/>
 	<script>
 		function showSentence ()
@@ -118,6 +118,8 @@
 	<div id="notice">
 	<i class="fa fa-info"></i> &nbsp; <strong>动态</strong>&nbsp;&nbsp;<small><i class="fa fa-clock-o"></i>&nbsp;2020-07-12 14:23</small><br/>
 	<p>近期计划：搞好评论系统、代码高亮、在主页做个随机生成对应网址的二维码，如您想让自己的网址出现在生成的二维码中，欢迎联系我（其实就是友链了qaq）</p>
+	<p>本站总访问量<span id="busuanzi_value_site_pv"></span>次
+本站访客数<span id="busuanzi_value_site_uv"></span>人次</p>
 	</div>
 	<div id="blog">
 		<h2 class="center"><i class="fa fa-calendar-o"></i>&nbsp;最新博文</h2>
@@ -148,7 +150,8 @@
 			<span class="h">「题解」USACO2006NOV-Gold Corn Fields</span>
 			<br/>
 			<br/>
-			<small><i class="fa fa-tag"></i> 题解&nbsp;&nbsp;<i class="fa fa-book"></i> OI | 算法 | 动态规划 | 状态压缩动态规划&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-07-11 22:23&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-07-11 22:23&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>			<br/>
+			<small><i class="fa fa-tag"></i> 题解&nbsp;&nbsp;<i class="fa fa-book"></i> OI | 算法 | 动态规划 | 状态压缩动态规划&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-07-11 22:23&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-07-11 22:23&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+</span>			<br/>
 			<br/>
 			<span>状态压缩动态规划。降低维度。</span>
 			</div>
@@ -269,7 +272,8 @@
 				day[4] = "四"
 				day[5] = "五"
 				day[6] = "六"
-				day[0] = "日"/*5.18 v4.4.1 Fix bug*/
+				day[0] = "日"
+				/*5.18 v4.4.1 Fix bug*/
 				s = s + nowDate.getFullYear().toString() + "年" + (nowDate.getMonth()+1).toString() + "月" + nowDate.getDate().toString() + "日 "
 				s = s + addPrefixZero(nowDate.getHours(), 2).toString() + ":" + addPrefixZero(nowDate.getMinutes(), 2).toString() + ":" + addPrefixZero(nowDate.getSeconds(), 2).toString()
 				s = s + "，星期" + day[nowDate.getDay()]
@@ -293,7 +297,7 @@
 			Luogu@<a href="https://www.luogu.com.cn/user/131109">robin_gao</a> | Codeforces@<a href="https://codeforces.com/profile/grobcj">grobcj</a>
 			<br/>
 			<br/>
-			Github@<a href="https://github.com/a-stranger-from-outerspace">A-stranger-from-outerspace</a> | Luogu@<a href="https://www.luogu.com.cn/user/130724">来自外WTK的路人</a> | Bilibili@<a href="https://space.bilibili.com/416540337">来自外太空的路人</a> | LiberOj@ <a href ="https://loj.ac/user/19322">A_stranger_from_outerspace</a>
+			Github@<a href="https://github.com/a-stranger-from-outerspace">A-stranger-from-outerspace</a> | Luogu@<a href="https://www.luogu.com.cn/user/130724">来自外WTK的路人</a> | Bilibili@<a href="https://space.bilibili.com/416540337">来自外太空的路人</a> 
 			<br/>
 			<br/>
 			<a href="https://www.xiaozhi.xin">小智编程</a>
@@ -302,7 +306,7 @@
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-star"></i>&nbsp;光荣榜</h2>
-			Github@<a href="https://github.com/a-stranger-from-outerspace">A-stranger-from-outerspace</a> | Luogu@<a href="https://www.luogu.com.cn/user/130724">来自WTK的路人</a> | Bilibili@<a href="https://space.bilibili.com/416540337">来自外太空的路人</a> | LiberOj@ <a href ="https://loj.ac/user/19322">A_stranger_from_outerspace</a>（提出了博客的若干问题以及建议，甚至看不下去了，亲自帮助修改了一些，包括这条[doge]）
+			Github@<a href="https://github.com/a-stranger-from-outerspace">A-stranger-from-outerspace</a> | Luogu@<a href="https://www.luogu.com.cn/user/130724">来自WTK的路人</a> | Bilibili@<a href="https://space.bilibili.com/416540337">来自外太空的路人</a> （提出了博客的若干问题以及建议，甚至看不下去了，亲自帮助修改了一些，包括这条[doge]）
 			<br/>
 			<br/>
 		</div>
