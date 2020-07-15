@@ -21,21 +21,7 @@ Markdown 格式来书写长文本。
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-最新版本：v4.9.0
-
-Fix: 
-
-1. 旧版页面 Bug。
-2. 修复了主页光荣榜与友链区文字超出边框的 Bug（主要是某人名字太长 Doge）。
-
-Change:
-
-1. 使旧版页面支持新版。
-2. 优化了404页面显示。
-
-Add:
-
-1. 主页“今天去哪儿”模块。
+[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v491-2020715-by-oistream--asfos)
 
 ## v3
 ### v3.0.1 (2020.3.24)
